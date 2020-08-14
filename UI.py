@@ -11,8 +11,8 @@ def button_pressed():
     a[3] = calc(train_entry.get(),0.00497)
     final_text.set("{:.2f}".format(sum(a)) + " metric tons of CO2")
     
-def selec():
-    tabControl.select(1)
+'''def selec():
+    tabControl.select(1)'''
     
     
 def calc(var, val):
@@ -43,8 +43,8 @@ elec_entry = ttk.Entry(tab1)
 elec_label.grid(row=0, column=0)
 elec_entry.grid(row = 0, column=1)
 
-transport_button = ttk.Button(tab1, text = "Next: Transport", command = selec)
-transport_button.grid(row = 1, column = 1)
+'''transport_button = ttk.Button(tab1, text = "Next: Transport", command = selec)
+transport_button.grid(row = 1, column = 1)'''
 
 
 bus_label = tk.Label(tab2, text = "Bus (in km):", padx = 50, pady =10)
