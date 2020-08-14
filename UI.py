@@ -17,21 +17,17 @@ def button_pressed():
     y_label = tk.Label(tab3, text = "kg of CO2", padx = 10, pady =10)
     y_label.grid(row = 0, column = 0)
     
-    
     b = ['Electricity','Bus','Local Train','Train']
     f = Figure(figsize=(4,3), dpi=100)
     ax = f.add_subplot(111).bar(b,a)
     
     result_bar = FigureCanvasTkAgg(f, tab3)
     result_bar.get_tk_widget().grid(row = 0, column = 1, padx = 30, pady = 30)
-    
-    tabControl.select(2)
-        
+    tabControl.select(2) 
     
 def selec():
     tabControl.select(1)
-    
-    
+       
 def calc(var, val):
     try:
         carbon = (float(var) * val)
@@ -65,7 +61,6 @@ elec_entry.grid(row = 0, column=1)
 transport_button = ttk.Button(tab1, text = "Next: Transport", command = selec)
 transport_button.grid(row = 1, column = 1)
 
-
 bus_label = tk.Label(tab2, text = "Bus (in km):", padx = 50, pady =10)
 bus_entry = ttk.Entry(tab2)
 
@@ -83,7 +78,6 @@ train_entry = ttk.Entry(tab2)
 
 train_label.grid(row=2, column=0)
 train_entry.grid(row = 2, column=1)
-
 
 final_button = ttk.Button(root, text = "Calculate CFC", command = button_pressed)
 final_button.pack(pady = 10)
